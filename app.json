@@ -1,11 +1,11 @@
 {
   "expo": {
-    "name": "eapp",
-    "slug": "eapp",
+    "name": "Protiidin",
+    "slug": "Protiidin",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "eapp",
+    "scheme": "protiidin",
     "userInterfaceStyle": "automatic",
     "ios": {
       "icon": "./assets/expo.icon"

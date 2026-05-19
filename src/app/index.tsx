@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { View, StyleSheet, Alert } from "react-native";
+import { View, StyleSheet, StatusBar } from "react-native";
 import NetInfo from "@react-native-community/netinfo";
 import { WebView } from "react-native-webview";
 import NoInternet from "@/components/NoInternet";
@@ -12,7 +12,6 @@ export default function HomeScreen() {
     const unsubscribe = NetInfo.addEventListener((state) => {
       setIsConnected(state.isConnected);
     });
-
     return () => unsubscribe();
   }, []);
 
@@ -25,12 +24,13 @@ export default function HomeScreen() {
   return (
     <View style={styles.container}>
       {isConnected ? (
-        <WebView
-          key={key}
-          source={{ uri: "https://protiidin.com" }}
-          style={{ flex: 1 }}
-          onError={() => setIsConnected(false)}
-        />
+    <WebView
+  key={key}
+  source={{ uri: "https://protiidin.com" }}
+  style={{ flex: 1 }}
+  onError={() => setIsConnected(false)}
+  automaticallyAdjustContentInsets={false}  
+/>
       ) : (
         <NoInternet onRetry={handleRetry} />
       )}
@@ -41,5 +41,6 @@ export default function HomeScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    paddingTop: StatusBar.currentHeight, 
   },
 });
