@@ -22,7 +22,7 @@ import { WebView } from "react-native-webview";
 import NoInternet from "@/components/NoInternet";
 
 
-export default function TabLayout() {
+export default function App() {
   const colorScheme = useColorScheme();
 
   const webViewRef = useRef(null);

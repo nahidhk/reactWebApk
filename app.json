@@ -7,7 +7,7 @@
     "icon": "./assets/images/logo.png",
     "scheme": "protiidin",
     "userInterfaceStyle": "automatic",
-    "jsEngine": "jsc",
+    "jsEngine": "hermes",
     "ios": {
       "icon": "./assets/expo.icon"
     },
